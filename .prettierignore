@@ -9,6 +9,7 @@ pnpm-lock.yaml
 yarn.lock
 
 /*.json
+src/components/ui/*
 
 
 .env

@@ -17,14 +17,13 @@ export default tseslint.config([
       reactRefresh.configs.vite,
       prettier,
     ],
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": ["off", { allowConstantExport: true }],
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
-    },
-  },
-  {
-    rules: {
-      "react-refresh/only-export-components": [{ allowConstantExport: true }],
     },
   },
 ]);

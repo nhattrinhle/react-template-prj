@@ -1,0 +1,13 @@
+# Run ESLint check
+echo "🔍 Running ESLint..."
+pnpm run lint
+
+# Run Prettier check
+echo "💅 Checking Prettier formatting..."
+npm run format:check
+
+# If you want to auto-fix instead of just checking, use:
+# npm run lint:fix
+# npm run format
+
+echo "✅ Pre-commit checks passed!"
