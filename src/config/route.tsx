@@ -1,5 +1,6 @@
 import { Layout } from "@/layouts";
-import { HomePage, AboutPage, NotFoundPage } from "@/pages";
+import { HomePage, AboutPage, NotFoundPage, LoginPage } from "@/pages";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -10,19 +11,31 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: (
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        ),
         handle: {
           crumb: () => "Home",
         },
       },
       {
         path: "about",
-        element: <AboutPage />,
+        element: (
+          <ProtectedRoute>
+            <AboutPage />
+          </ProtectedRoute>
+        ),
         handle: {
           crumb: () => "About",
         },
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
   },
   {
     path: "*",
