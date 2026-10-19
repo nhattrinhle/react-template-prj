@@ -1,6 +1,13 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "redirects": [
+    {
+      "source": "/campaign/:path*",
+      "destination": "https://redirect/campaign/:path*",
+      "permanent": true
+    }
   ]
 }
   
