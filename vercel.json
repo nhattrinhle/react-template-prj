@@ -6,7 +6,7 @@
     {
       "source": "/campaign/:path*",
       "destination": "https://redirect/campaign/:path*",
-      "permanent": true
+      "permanent": false
     }
   ]
 }
